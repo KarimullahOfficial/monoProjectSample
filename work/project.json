@@ -1,0 +1,24 @@
+{
+  "name": "work",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "work:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "work:build:development"
+        },
+        "production": {
+          "buildTarget": "work:build:production"
+        }
+      }
+    }
+  }
+}
